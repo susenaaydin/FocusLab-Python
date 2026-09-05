@@ -1,65 +1,65 @@
 # FocusLab-Python
-# FocusLab
 
-Python ve CustomTkinter kullanılarak geliştirilmiş, çalışma süresini takip etmeye ve günlük görevleri düzenlemeye yardımcı olan masaüstü odaklanma uygulaması.
+A desktop productivity and focus application developed with Python and CustomTkinter. FocusLab helps users track their working time, manage daily tasks, and review their productivity history.
 
-## Özellikler
+## Features
 
-* Kronometre ile çalışma süresi takibi
-* Zamanlayıcı ile belirli süreli çalışma
-* 10, 25 ve 45 dakikalık hazır zamanlayıcı seçenekleri
-* Özel süre belirleyebilme
-* Günlük görev ekleme ve silme
-* Görev kategorileri oluşturma
-* Çalışma sürelerini kategorilere göre kaydetme
-* Günlük çalışma geçmişini görüntüleme
-* Günlük çalışma istatistiklerini görüntüleme
-* Takvim üzerinden geçmiş çalışma sürelerini inceleme
-* 9 farklı tema seçeneği
-* Verilerin `JSON` dosyasında kalıcı olarak saklanması
+* Work time tracking with a stopwatch
+* Countdown timer for focused work sessions
+* Preset timers of 10, 25, and 45 minutes
+* Custom timer duration
+* Adding and deleting daily tasks
+* Creating and managing task categories
+* Recording work sessions by category
+* Viewing daily work history
+* Viewing daily productivity statistics
+* Reviewing previous work sessions through the calendar
+* 9 different color themes
+* Persistent data storage using a `JSON` file
+* Windows `.exe` version available
 
-## Kullanılan Teknolojiler
+## Technologies
 
 * Python
 * CustomTkinter
+* Tkinter
 * JSON
 * Threading
-* Tkinter
 * PyInstaller
 
-## Uygulama Bölümleri
+## Application Sections
 
-### Kronometre
+### Stopwatch
 
-Çalışma süresini saniye bazında takip eder. Kronometre çalışırken toplam süre günlük çalışma geçmişine kaydedilir.
+Tracks working time in seconds. While the stopwatch is running, the working time is recorded in the daily history.
 
-### Zamanlayıcı
+### Timer
 
-Hazır süre seçenekleri:
+FocusLab provides three preset timer options:
 
-* 10 dakika
-* 25 dakika
-* 45 dakika
+* 10 minutes
+* 25 minutes
+* 45 minutes
 
-Bunların yanında kullanıcı kendi çalışma süresini dakika cinsinden belirleyebilir.
+Users can also enter a custom duration in minutes.
 
-### Günlük Planlayıcı
+### Daily Planner
 
-Kullanıcı kendi görevlerini ve görev kategorilerini oluşturabilir.
+Users can create and delete tasks and organize them using custom categories.
 
-Görevler tamamlanma durumları ve çalışma süreleriyle birlikte saklanır.
+Tasks are stored together with their completion status and recorded working duration.
 
-### Takvim
+### Calendar
 
-Geçmiş günlerde gerçekleştirilen toplam çalışma sürelerini görüntüler.
+Displays the total amount of recorded working time for previous days.
 
-### İstatistik
+### Statistics
 
-Bugünkü toplam çalışma süresini saat ve dakika olarak gösterir.
+Displays the total working time for the current day in hours and minutes.
 
-### Tema Seçimi
+### Theme Selection
 
-Uygulama içerisinde farklı renk temaları kullanılabilir:
+The application includes 9 different themes:
 
 * Pink
 * Dark Pink
@@ -71,11 +71,11 @@ Uygulama içerisinde farklı renk temaları kullanılabilir:
 * Mint
 * Sunset Orange
 
-## Veri Saklama
+## Data Storage
 
-Uygulama içerisindeki görevler, kategoriler, tema seçimi ve çalışma geçmişi `data.json` dosyasında saklanır.
+FocusLab stores tasks, categories, the selected theme, and working history in the `data.json` file.
 
-Örnek veri yapısı:
+Example data structure:
 
 ```json
 {
@@ -86,27 +86,27 @@ Uygulama içerisindeki görevler, kategoriler, tema seçimi ve çalışma geçmi
 }
 ```
 
-## Çalıştırma
+## Installation
 
-Python ile çalıştırmak için gerekli kütüphaneyi yükleyin:
+Install the required Python library:
 
 ```bash
 pip install customtkinter
 ```
 
-Ardından:
+Then run the application with:
 
 ```bash
 python FocusLab.py
 ```
 
-## Windows EXE Sürümü
+## Windows EXE Version
 
-FocusLab'ın Windows üzerinde Python kurulumu gerektirmeden çalıştırılabilen `.exe` sürümü de bulunmaktadır.
+A standalone Windows `.exe` version of FocusLab is also available.
 
-Hazır sürümü GitHub Releases bölümünden indirerek doğrudan çalıştırabilirsiniz.
+The executable can be downloaded from the **GitHub Releases** section and run without requiring a Python installation.
 
-## Proje Yapısı
+## Project Structure
 
 ```text
 FocusLab/
@@ -114,36 +114,30 @@ FocusLab/
 ├── FocusLab.py
 ├── data.json
 ├── README.md
-└── ...
+└── .gitignore
 ```
 
-## Proje Amacı
+## Project Purpose
 
-FocusLab; çalışma süresini takip etmek, görevleri düzenlemek ve günlük çalışma verilerini saklamak amacıyla geliştirilmiş bir masaüstü uygulamasıdır.
+FocusLab was developed as a desktop productivity application for tracking working time, organizing tasks, and storing daily productivity data.
 
-Proje kapsamında Python ile masaüstü arayüz geliştirme, JSON tabanlı veri saklama, zaman yönetimi, çoklu iş parçacığı kullanımı ve uygulamanın `.exe` formatına dönüştürülmesi üzerine çalışılmıştır.
+The project demonstrates desktop GUI development with Python, JSON-based data storage, time management, threading, theme management, and packaging a Python application as a Windows executable.
 
-## Durum
+## Project Status
 
-Tamamlandı.
+Completed.
 
-## Geliştirilebilecek Özellikler
+## Future Improvements
 
-* Grafik tabanlı istatistikler
-* Görev düzenleme
-* Bildirim sistemi
-* Pomodoro modu
-* Haftalık ve aylık raporlar
-* Çalışma hedefleri
-* Daha gelişmiş takvim görünümü
+* Graph-based productivity statistics
+* Task editing
+* Notification system
+* Pomodoro mode
+* Weekly and monthly reports
+* Daily and weekly work goals
+* More advanced calendar interface
+* Improved data management
 
-## Geliştirici
+## Author
 
 Sude Sena Aydın
-
-```
-
-**GitHub'da EXE'yi normal dosya olarak repo içine koymak yerine** mümkünse `Releases` bölümüne koymanı öneririm. README'deki “Windows EXE Sürümü” kısmı da kullanıcıyı oraya yönlendirir.
-
-İstersen sonraki adımda sana **FocusLab için GitHub Description kısmına yazacağın tek cümleyi** de hazırlayabilirim.
-```
